@@ -11,11 +11,11 @@ def call(serverName) {
     
     def remote = [:]
     remote.name = "${serverName}"
-    remote.host = serverMap.${serverName}.host
+    remote.host = "serverMap.${serverName}.host"
     remote.allowAnyHosts = true
     withCredentials([sshUserPrivateKey(
             keyFileVariable:"key",
-            credentialsId:serverMap.${serverName}.sshKey,
+            credentialsId:"gnode-key",
             usernameVariable:"userName")]) {
         remote.user = userName
         remote.identityFile = key
@@ -24,4 +24,5 @@ def call(serverName) {
     println("remote.name = ${remote.name}")
     println("remote.user = ${remote.user}")
     println("remote.host = ${remote.host}")
+    println(serverMap.${serverName}.host)
 }
