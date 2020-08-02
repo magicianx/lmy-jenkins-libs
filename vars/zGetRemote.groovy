@@ -1,4 +1,4 @@
-// vars/getServer.groovy
+// vars/zGetRemote.groovy
 def call(serverName) {
     def XNODE1 = ['name':'xnode1', 'host':'152.32.168.223', 'sshKey':'xnode-key']
     def XNODE2 = ['name':'xnode2', 'host':'152.32.135.41', 'sshKey':'xnode-key']
@@ -20,8 +20,5 @@ def call(serverName) {
         remote.user = userName
         remote.identityFile = key
     }
-    println("serverName = ${serverName}")
-    println("remote.name = ${remote.name}")
-    println("remote.user = ${remote.user}")
-    println("remote.host = ${remote.host}")
+    return remote
 }
