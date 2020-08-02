@@ -12,11 +12,11 @@ def serverMap = ['xnode1':XNODE1, 'xnode2':XNODE2, 'xnode3':XNODE3, 'xnode4':XNO
 def call(serverName) {
     def remote = [:]
     remote.name = "${serverName}"
-    remote.host = serverMap.${serverName}.host
+    remote.host = 'serverMap.${serverName}.host'
     remote.allowAnyHosts = true
     withCredentials([sshUserPrivateKey(
             keyFileVariable:"key",
-            credentialsId:serverMap.${serverName}.sshKey,
+            credentialsId:"serverMap.${serverName}.sshKey",
             usernameVariable:"userName")]) {
         remote.user = userName
         remote.identityFile = key
@@ -24,4 +24,5 @@ def call(serverName) {
     println("serverName = ${serverName}")
     println("remote.name = ${remote.name}")
     println("remote.user = ${remote.user}")
+    println(serverMap)
 }
