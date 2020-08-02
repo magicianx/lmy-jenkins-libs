@@ -2,10 +2,10 @@
 XNODE1 = ['name':'xnode1', 'host':'152.32.168.223', 'sshKey':'xnode-key']
 XNODE2 = ['name':'xnode2', 'host':'152.32.135.41', 'sshKey':'xnode-key']
 XNODE3 = ['name':'xnode3', 'host':'103.72.145.76', 'sshKey':'xnode-key']
-XNODE4 = ['name':'xnode3', 'host':'128.1.137.140', 'sshKey':'xnode-key']
+XNODE4 = ['name':'xnode4', 'host':'128.1.137.140', 'sshKey':'xnode-key']
 GNODE1 = ['name':'gnode1', 'host':'mgr.vchat.club', 'sshKey':'gnode-key']
-GNODE2 = ['name':'gnode1', 'host':'api1.vchat.club', 'sshKey':'gnode-key']
-GNODE3 = ['name':'gnode1', 'host':'api1.vchat.club', 'sshKey':'gnode-key']
+GNODE2 = ['name':'gnode2', 'host':'api1.vchat.club', 'sshKey':'gnode-key']
+GNODE3 = ['name':'gnode3', 'host':'api2.vchat.club', 'sshKey':'gnode-key']
 
 serverMap = ['xnode1':XNODE1, 'xnode2':XNODE2, 'xnode3':XNODE3, 'xnode4':XNODE4, 'gnode1':GNODE1, 'gnode2':GNODE2, 'gnode3':GNODE3]
 
