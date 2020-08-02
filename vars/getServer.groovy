@@ -10,6 +10,7 @@ def call(serverName) {
             usernameVariable:"userName")]) {
         remote.user = userName
         remote.identityFile = key
-}
-println("serverName")
+    }
+    println("serverName = ${serverName}")
+    println("remote.name = ${remote.name}")
 }
