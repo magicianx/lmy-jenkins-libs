@@ -24,5 +24,5 @@ def call(serverName) {
     println("remote.name = ${remote.name}")
     println("remote.user = ${remote.user}")
     println("remote.host = ${remote.host}")
-    println(serverMap)
+    println(serverMap.gnode1.host)
 }
