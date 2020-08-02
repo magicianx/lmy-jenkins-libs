@@ -16,7 +16,7 @@ def call(serverName) {
     remote.allowAnyHosts = true
     withCredentials([sshUserPrivateKey(
             keyFileVariable:"key",
-            credentialsId:"serverMap.${serverName}.sshKey",
+            credentialsId:"gnode-key",
             usernameVariable:"userName")]) {
         remote.user = userName
         remote.identityFile = key
